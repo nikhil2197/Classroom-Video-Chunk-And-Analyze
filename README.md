@@ -1,26 +1,40 @@
 # 🎥 Chunk, Transcribe, and Analyze Classroom Video
 
-This Python tool automates the process of evaluating classroom teaching sessions. It:
-1. Splits a video into 1-minute chunks
-2. Transcribes each chunk using OpenAI's Whisper
-3. Evaluates the teacher's performance using GPT-4o
+This repository contains a collection of basic scripts I've written to experiment with different approaches to analyzing classroom video. The goal is to automate the process of evaluating teaching sessions through a combination of video chunking, transcription, and performance analysis.
+
+The scripts in this repo include attempts using:
+- **OpenAI Whisper** for transcription and evaluation
+- **Google Cloud Video Intelligence API** for activity recognition and segmentation (coming soon)
+- Other approaches I’m testing for better accuracy, speed, and cost-effectiveness
+
+Each script reflects a different approach. Below are descriptions of individual attempts, observations, and how to run them.
 
 ---
 
-## 🚀 Features
+## `whisperaudio_chunk_transcribe_analyze.py`
 
-- Automatically chunks long classroom videos
-- Uses Whisper for accurate audio transcription
-- Evaluates teaching performance based on 5 key metrics:
+### 🚀 What It Does
+
+- Uses Whisper's `base` model to transcribe audio from 1-minute video chunks
+- Sends the combined transcript to GPT-4o for evaluation on:
   - Clarity and articulation
   - Engagement and questioning style
   - Classroom management
   - Use of feedback and encouragement
   - Instructional structure
 
----
+### 📈 Early Observations
 
-## 📦 Requirements
+- **Pros:**
+  - Whisper is relatively fast and accurate for clean audio
+  - GPT-4o generates thoughtful evaluations when given full transcripts
+
+- **Cons:**
+  - Whisper struggles with noisy environments or crosstalk
+  - GPT evaluation depends heavily on transcription quality
+  - Lacks speaker separation and timestamped analysis (next goal)
+
+### 📦 Requirements
 
 - Python 3.9+
 - [ffmpeg](https://ffmpeg.org/download.html)
@@ -35,9 +49,7 @@ pip install openai whisper
 
 Make sure `ffmpeg` is installed and in your system path.
 
----
-
-## 🔑 Setup
+### 🔑 Setup
 
 Set your OpenAI API key as an environment variable:
 
@@ -45,9 +57,7 @@ Set your OpenAI API key as an environment variable:
 export OPENAI_API_KEY="sk-..."
 ```
 
----
-
-## ▶️ Usage
+### ▶️ Usage
 
 ```bash
 python transcribe_and_evaluate.py path/to/video.mp4
@@ -72,7 +82,12 @@ Do **not** commit `.mp4` files to the repo. Use a `.gitignore` to avoid tracking
 ## 📁 File Structure
 
 ```
-transcribe_and_evaluate.py   # Main script
-README.md                    # This file
+whisperaudio_chunk_transcribe_analyze.py   # Whisper-based pipeline
+README.md                                  # This file
+<future files>                             # Other experiments (GCP, diarization, etc.)
 ```
+
+---
+
+More updates and experimental results coming soon.
 
