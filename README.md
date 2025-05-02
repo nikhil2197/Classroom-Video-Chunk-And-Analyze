@@ -119,7 +119,7 @@ export OPENAI_API_KEY="sk-..."
 ### ▶️ Usage
 
 ```bash
-python analyze_video_with_gcp.py path/to/video.mp4
+python main.py path/to/video.mp4
 ```
 
 Output:
