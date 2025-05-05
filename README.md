@@ -6,7 +6,7 @@ The scripts in this repo include attempts using:
 
 * **OpenAI Whisper** for transcription and evaluation
 * **Google Cloud Video Intelligence API** for activity recognition and segmentation passed through to **GPT 4o** for scoring
-* Other approaches I’m testing for better accuracy, speed, and cost-effectiveness
+* **Demucs + Whisper (GPU) for teacher‑voice isolation** ← current most accurate, first real usable output for this project. 
 
 Each script reflects a different approach. Below are descriptions of individual attempts, observations, and how to run them.
 
@@ -85,7 +85,7 @@ Output:
 
 * **What worked:**
 
-  * Successfully extracted both transcript and activity labels
+  * Nothing really - the pipeline ran succesfully but produced no output 
 
 * **What didn’t work:**
 
@@ -128,6 +128,46 @@ Output:
 * Performance analysis generated via GPT-4o
 
 ---
+
+## `demucs_whisper`  🔥 *(current fastest & most accurate)*
+
+### 🚀 What It Does
+
+| Stage                      | Tool / Settings                                                                                                                         |
+| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
+| **Chunk video**            | `ffmpeg` – 60 s segments → `/var/tmp/chunk_###.wav`                                                                                     |
+| **Isolate teacher vocals** | **Demucs `mdx_extra_q`** on **GPU**<br>  • `segment = 15 s`, `overlap = 0.25`, `shifts = 0` (no 11× TTA)<br>  • mono → stereo duplication handled in‑code |
+| **Transcribe**             | **Whisper large‑v3** on **GPU**, `fp16=True`, `language="en"`                                                                          |
+| **Analyse**                | (optional) GPT‑4o prompt for strengths / areas / summary                                                                               |
+
+### 📈 Observations (Whisper‑only vs Demucs + Whisper)
+
+| Metric / Example                 | **Whisper‑only**                                                | **Demucs + Whisper**                                                       |
+| -------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| Speaker bleed                    | Children’s hubbub dominates, teacher lines lost                 | Teacher channel isolated, background ≫ ‑18 dB                              |
+| Sample line (Chunk 2)            | `And stretch, zip your hip wide …` → words blur in babble       | *“And stretch… zip your hip wide… bring your legs to the side…”*           |
+| GPT‑4o feedback                  | Generic (“storytelling engages… improve clarity”)               | Specific, references *boat race*, *roll the boat* activities               |
+
+
+> **Key takeaway 🟢** – with vocal separation the transcript becomes coherent enough that GPT‑4o can produce actionable, lesson‑specific feedback instead of boiler‑plate.
+
+## 📦 Requirements
+
+```bash
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+pip install ffmpeg-python scipy diffq
+pip install git+https://github.com/openai/whisper.git
+pip install demucs==4.*
+```
+---
+
+## ▶️ Usage
+
+```bash
+python main.py path/to/video.mp4
+```
+
+----
 
 ## ⚠️ Note on Large Files
 
