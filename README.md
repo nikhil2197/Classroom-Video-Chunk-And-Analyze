@@ -138,7 +138,7 @@ Output:
 | **Chunk video**            | `ffmpeg` – 60 s segments → `/var/tmp/chunk_###.wav`                                                                                     |
 | **Isolate teacher vocals** | **Demucs `mdx_extra_q`** on **GPU**<br>  • `segment = 15 s`, `overlap = 0.25`, `shifts = 0` (no 11× TTA)<br>  • mono → stereo duplication handled in‑code |
 | **Transcribe**             | **Whisper large‑v3** on **GPU**, `fp16=True`, `language="en"`                                                                          |
-| **Analyse**                | (optional) GPT‑4o prompt for strengths / areas / summary                                                                               |
+| **Analyse**                | GPT‑4o prompt for strengths / areas / summary                                                                               |
 
 ### 📈 Observations (Whisper‑only vs Demucs + Whisper)
 
