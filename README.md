@@ -55,7 +55,9 @@ python combine_audio_video_feedback.py
 Even though these issues exist, the output still catches actionable feedback such as teacher dominance, usage of open-ended questions, and personalized attention.
 
 ### Sample Final Output
-See the file `sample_feedback.txt` for a complete example of the output feedback.
+See the file `Combined_Pipeline_Outputs` folder for the detailed outputs from the 2 runs. Inside this folder you can see the intermediate outputs from the Audio and Video processing steps as well as the final feedback. 
+- **Teacher 1**: Only a snippet of an art & craft activity was provided and the prompt used by LLaVA was a stub prompt. 
+- **Teacher 2**: A clip of a full storytelling activity was provided with the LLaVA prompt containing both context about the activity and directions w.reg. to what to analyze in the images. 
 
 ### ⚠️ Important
 All code runs on a GCP NVIDIA T4 GPU (n1-standard-16) for optimal performance. Ensure you have the appropriate environment configured.
