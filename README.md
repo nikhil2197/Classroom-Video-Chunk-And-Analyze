@@ -49,7 +49,7 @@ python combine_audio_video_feedback.py
 
 ### Issues and Limitations
 - **Audio Quality**: The current audio transcript still contains noise from adjacent classes (picked up by the microphone), which affects accuracy. Human reviewers can often ignore background sounds, but the audio processing currently lacks this ability. We may address this by using larger models and improving microphone setup.
-- **Visual Context**: The LLaVA model sometimes guesses the class type (e.g., 'Art and Craft') when it is uncertain. Providing more explicit context or providing a fully contained activity rather than a small clip of an activity may yield better results.
+- **Visual Context**: The LLaVA model sometimes guesses the class type (e.g., 'Art and Craft') when it is uncertain. Providing more explicit context or providing a fully contained activity rather than a small clip of an activity may yield better results. This was verified by simply attempting a more focused LLaVA prompt, hence further improvements will be made in this direction. 
 
 Even though these issues exist, the output still catches actionable feedback such as teacher dominance, usage of open-ended questions, and personalized attention.
 
