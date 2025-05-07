@@ -32,7 +32,7 @@ from collections import OrderedDict
 
 import sys, pathlib
 
-# Ensure parent folder is in the import path
+#Ensure parent folder is in the import path
 #sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent))
 
 from config import OPENAI_MODEL
@@ -44,7 +44,17 @@ SAFETY_BUFFER = 3000
 MAX_INPUT_TOKENS = TPM_LIMIT - MAX_REPLY_TOKENS - SAFETY_BUFFER
 SLEEP_SECONDS = 75
 
-PROMPT_REMOVER = re.compile(r"\s*Describe what is happening in this classroom scene\.\s*", re.I)
+PROMPT_REMOVER = re.compile(
+    r"\s*This image is from a pre-school storytelling class\. I would like you to analyze the scene and provide a detailed breakdown of what is happening\. Specifically, focus on the following aspects:\s*"
+    r"1\. Children's Actions: Describe what the children are doing, including any notable gestures, facial expressions, or group activities\.\s*"
+    r"2\. Teacher's Role: Observe how the teacher is interacting with the children, including their use of props and storytelling techniques\.\s*"
+    r"3\. Classroom Management: Highlight any visible strategies used by the teacher to maintain engagement and order, such as gestures, positioning, or visual aids\.\s*"
+    r"4\. Props and Visual Aids: Identify any props or materials being used and explain how they are integrated into the storytelling\.\s*"
+    r"5\. Overall Atmosphere: Describe the general mood or energy of the class and how effectively the storytelling setup seems to support learning and engagement\.\s*"
+    r"Please provide a clear and comprehensive analysis based on these points\.\s*",
+    re.I
+)
+
 
 # Token encoding
 enc = tiktoken.encoding_for_model(OPENAI_MODEL)
@@ -166,18 +176,18 @@ Merge duplicates, eliminate contradictions, and prioritize clarity and actionabi
         f.write(final)
     print(f"✅ Feedback saved to {output_path}")
 
-# Main execution
+#Main execution
 #if __name__ == "__main__":
 #    if len(sys.argv) < 2:
 #        print("Usage: python gpt4o_feedback.py <llava_json_path> [output_dir]")
 #        sys.exit(1)
-
+#
 #    llava_json_path = sys.argv[1]
 #    output_dir = sys.argv[2] if len(sys.argv) > 2 else os.path.dirname(llava_json_path)
-
+#
 #    print(f"Input file: {llava_json_path}")
 #    print(f"Output directory: {output_dir}")
-
+#
 #    try:
 #        generate_feedback(llava_json_path, output_dir)
 #    except Exception as e:
