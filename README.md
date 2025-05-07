@@ -1,193 +1,61 @@
-# 🎥 Chunk, Transcribe, and Analyze Classroom Video
+# 🎥 Classroom Video Analysis and Feedback Tool
 
-This repository contains a collection of basic scripts I've written to experiment with different approaches to analyzing classroom video. The goal is to automate the process of evaluating teaching sessions through a combination of video chunking, transcription, and performance analysis.
+This repository contains a collection of scripts for experimenting with different approaches to analyzing classroom video. The primary goal is to automate the evaluation of teaching sessions through a combination of video chunking, transcription, and performance analysis.
 
 The scripts in this repo include attempts using:
 
-* **OpenAI Whisper** for transcription and evaluation
-* **Google Cloud Video Intelligence API** for activity recognition and segmentation passed through to **GPT 4o** for scoring
-* **Demucs + Whisper (GPU) for teacher‑voice isolation** ← current most accurate, first real usable output for this project. 
+- **OpenAI Whisper** for transcription and evaluation
+- **Google Cloud Video Intelligence API** for activity recognition and segmentation passed through to **GPT-4o** for scoring
+- **Demucs + Whisper (GPU)** for teacher voice isolation
+- **LLaVA (Language-Image Alignment Vision Assistant)** for visual analysis of classroom scenes
+- **Combined Audio-Video Feedback Script** for synthesizing audio and image-based feedback into a comprehensive evaluation
 
-Each script reflects a different approach. Below are descriptions of individual attempts, observations, and how to run them.
+### Evolution of Approaches
 
----
+#### Early Fast Approaches (Low Signal)
+Initially, we tried basic methods using Whisper and Google Cloud Video Intelligence API. These approaches were fast and simple to implement but produced limited or no actionable insights, primarily due to noisy environments and poor video quality.
 
-## `whisperaudio_chunk_transcribe_analyze.py`
+#### GPU-Based Custom Models (Higher Signal)
+To overcome the limitations of earlier methods, we moved to a GPU-based setup using a GCP NVIDIA T4 GPU with the machine type: **n1-standard-16 (16 vCPUs, 60 GB memory)**. The following components were integrated:
 
-### 🚀 What It Does
+1. **Demucs + Whisper (Audio)** - Accurate teacher voice isolation from noisy classroom audio.
+2. **LLaVA (Visual)** - Frame-by-frame scene analysis to understand classroom dynamics visually.
+3. **Combine Script** - Integrates audio and visual feedback to generate a holistic report.
 
-* Uses Whisper's `base` model to transcribe audio from 1-minute video chunks
-* Sends the combined transcript to GPT-4o for evaluation on:
+### Demucs + Whisper Pipeline (Audio)
+The Demucs + Whisper pipeline isolates the teacher’s voice from noisy classroom environments and transcribes it using Whisper large-v3. This approach significantly improves transcription accuracy when compared to raw audio processing.
 
-  * Clarity and articulation
-  * Engagement and questioning style
-  * Classroom management
-  * Use of feedback and encouragement
-  * Instructional structure
-
-### 📈 Early Observations
-
-* **Pros:**
-
-  * Whisper is relatively fast and accurate for clean audio
-  * GPT-4o generates thoughtful evaluations when given full transcripts
-
-* **Cons:**
-
-  * Whisper struggles with noisy environments or crosstalk
-  * GPT evaluation depends heavily on transcription quality
-  * Lacks speaker separation and timestamped analysis (next goal)
-
-### 📦 Requirements
-
-* Python 3.9+
-* [ffmpeg](https://ffmpeg.org/download.html)
-* [OpenAI Python SDK](https://github.com/openai/openai-python)
-* [Whisper](https://github.com/openai/whisper)
-
-Install dependencies:
-
-```bash
-pip install openai whisper
-```
-
-Make sure `ffmpeg` is installed and in your system path.
-
-### 🔑 Setup
-
-Set your OpenAI API key as an environment variable:
-
-```bash
-export OPENAI_API_KEY="sk-..."
-```
-
-### ▶️ Usage
-
-```bash
-python transcribe_and_evaluate.py path/to/video.mp4
-```
-
-Output:
-
-* Full transcript printed to console
-* Teacher performance analysis printed after transcription
-
----
-
-## `GCPVideoAI_GPT4o_Pipe`
-
-### 🚀 What It Does
-
-* Uses **Google Cloud Video Intelligence API** to generate activity labels and speech transcripts from classroom video
-* Passes both labels and transcripts **into GPT-4o** to analyze teacher performance within a structured timeline
-
-### 📈 Early Observations
-
-* **What worked:**
-
-  * Nothing really - the pipeline ran succesfully but produced no output 
-
-* **What didn’t work:**
-
-  * Poor video quality (shot on a phone from many angles) degraded both transcription and video labeling quality
-  * Inconsistent framing and audio resulted in a weak input timeline for GPT-4o evaluation
-
-### 📦 Requirements
-
-* Python 3.9+
-* [Google Cloud SDK](https://cloud.google.com/sdk/docs/install)
-* `google-cloud-videointelligence` Python package
-* [OpenAI Python SDK](https://github.com/openai/openai-python)
-
-Install dependencies:
-
-```bash
-pip install google-cloud-videointelligence openai
-```
-
-### 🔑 Setup
-
-1. Enable the **Video Intelligence API** in your Google Cloud Console.
-2. Download your service account key JSON file.
-3. Set the environment variable:
-
-```bash
-export GOOGLE_APPLICATION_CREDENTIALS="path/to/your/service-account-file.json"
-export OPENAI_API_KEY="sk-..."
-```
-
-### ▶️ Usage
-
+#### Usage (within the Demucs + Whisper file path)
 ```bash
 python main.py path/to/video.mp4
 ```
 
-Output:
+### LLaVA Video Analysis (Visual)
+The LLaVA approach focuses on analyzing classroom scenes from videos using image recognition models. It breaks down classroom interactions visually, identifying group activities, individual engagement, and teacher movements.
 
-* Activity labels and transcript printed or saved
-* Performance analysis generated via GPT-4o
-
----
-
-## `demucs_whisper`  🔥 *(current fastest & most accurate)*
-
-### 🚀 What It Does
-
-| Stage                      | Tool / Settings                                                                                                                         |
-| -------------------------- | --------------------------------------------------------------------------------------------------------------------------------------- |
-| **Chunk video**            | `ffmpeg` – 60 s segments → `/var/tmp/chunk_###.wav`                                                                                     |
-| **Isolate teacher vocals** | **Demucs `mdx_extra_q`** on **GPU**<br>  • `segment = 15 s`, `overlap = 0.25`, `shifts = 0` (no 11× TTA)<br>  • mono → stereo duplication handled in‑code |
-| **Transcribe**             | **Whisper large‑v3** on **GPU**, `fp16=True`, `language="en"`                                                                          |
-| **Analyse**                | GPT‑4o prompt for strengths / areas / summary                                                                               |
-
-### 📈 Observations (Whisper‑only vs Demucs + Whisper)
-
-| Metric / Example                 | **Whisper‑only**                                                | **Demucs + Whisper**                                                       |
-| -------------------------------- | ---------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Speaker bleed                    | Children’s hubbub dominates, teacher lines lost                 | Teacher channel isolated, background ≫ ‑18 dB                              |
-| Sample line (Chunk 2)            | `And stretch, zip your hip wide …` → words blur in babble       | *“And stretch… zip your hip wide… bring your legs to the side…”*           |
-| GPT‑4o feedback                  | Generic (“storytelling engages… improve clarity”)               | Specific, references *boat race*, *roll the boat* activities               |
-
-
-> **Key takeaway 🟢** – with vocal separation the transcript becomes coherent enough that GPT‑4o can produce actionable, lesson‑specific feedback instead of boiler‑plate.
-
-## 📦 Requirements
-
-```bash
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-pip install ffmpeg-python scipy diffq
-pip install git+https://github.com/openai/whisper.git
-pip install demucs==4.*
-```
----
-
-## ▶️ Usage
-
+#### Usage (within the LLaVA file path)
 ```bash
 python main.py path/to/video.mp4
 ```
 
-----
+### Combining Audio and Video Feedback
+The combined approach runs the Demucs pipeline first, followed by the LLaVA pipeline. The outputs from both are then integrated using the combine script to generate a comprehensive evaluation report.
 
-## ⚠️ Note on Large Files
-
-Do **not** commit `.mp4` files to the repo. Use a `.gitignore` to avoid tracking them:
-
-```gitignore
-*.mp4
+#### Usage (after the Audio and Video runs have been completed and path added)
+```bash
+python combine_audio_video_feedback.py
 ```
 
----
+### Issues and Limitations
+- **Audio Quality**: The current audio transcript still contains noise from adjacent classes (picked up by the microphone), which affects accuracy. Human reviewers can often ignore background sounds, but the audio processing currently lacks this ability. We may address this by using larger models and improving microphone setup.
+- **Visual Context**: The LLaVA model sometimes guesses the class type (e.g., 'Art and Craft') when it is uncertain. Providing more explicit context or providing a fully contained activity rather than a small clip of an activity may yield better results.
 
-## 📁 File Structure
+Even though these issues exist, the output still catches actionable feedback such as teacher dominance, usage of open-ended questions, and personalized attention.
 
-```
-whisperaudio_chunk_transcribe_analyze.py   # Whisper-based pipeline
-GCPVideoAI_GPT4o_Pipe/                     # Google Cloud Video AI + GPT-4o pipeline
-README.md                                  # This file
-<future files>                             # Other experiments (diarization, etc.)
-```
+### Sample Final Output
+See the file `sample_feedback.txt` for a complete example of the output feedback.
 
----
+### ⚠️ Important
+All code runs on a GCP NVIDIA T4 GPU (n1-standard-16) for optimal performance. Ensure you have the appropriate environment configured.
 
 More updates and experimental results coming soon.
