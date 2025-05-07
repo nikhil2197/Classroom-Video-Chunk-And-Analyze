@@ -32,6 +32,7 @@ python main.py path/to/video.mp4
 
 ### LLaVA Video Analysis (Visual)
 The LLaVA approach focuses on analyzing classroom scenes from videos using image recognition models. It breaks down classroom interactions visually, identifying group activities, individual engagement, and teacher movements.
+**Note on speed** - you can expect to process about 6 frames (1 frame = 1 minute of the video) per clock minute in the current implementation on the NVIDIA T4 GPU mentioned. 
 
 #### Usage (within the LLaVA file path)
 ```bash
