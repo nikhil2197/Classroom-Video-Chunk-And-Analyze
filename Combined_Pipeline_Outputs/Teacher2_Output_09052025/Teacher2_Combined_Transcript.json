@@ -1,0 +1,732 @@
+[
+  {
+    "start": 0.0,
+    "end": 10.006813,
+    "transcript": "十字架",
+    "image": {
+      "setup": "The classroom appears to be well-organized and clean, with a focus on learning and play. The children are sitting on the floor, which suggests a more relaxed and informal atmosphere. The presence of books and other learning materials indicates that the classroom is designed to facilitate learning and exploration. The decorations, such as the greenery and the balloons, add a touch of creativity and fun to the"
+    }
+  },
+  {
+    "start": 10.0,
+    "end": 20.00775,
+    "transcript": "You are listening to us today.",
+    "image": {
+      "setup": "Comment on the setup of the classroom such as the general cleanliness, organization of the classroom, decoration of the classroom etc."
+    }
+  },
+  {
+    "start": 20.0,
+    "end": 30.007813,
+    "transcript": "Yes!",
+    "image": {
+      "setup": "The classroom appears to be well-organized and clean, with a focus on learning and engagement. The students are seated on the floor, which encourages a more relaxed and interactive learning environment. The presence of a stuffed monkey and a teddy bear suggests that the classroom is decorated to create a fun and engaging atmosphere for the children. The arrangement of the students and the materials in the room indicates"
+    }
+  },
+  {
+    "start": 30.0,
+    "end": 39.984625,
+    "transcript": "Yes, that's right. So we have a monkey and we have a baby.",
+    "image": {
+      "setup": "The classroom appears to be well-organized and clean, with a focus on learning and engagement. The students are seated on the floor, which suggests a more relaxed and informal learning environment. The presence of a mirror in the room indicates that the space is designed for self-reflection and self-assessment. The room is decorated with greenery, which adds a touch of nature and freshness to"
+    }
+  },
+  {
+    "start": 40.0,
+    "end": 50.00775,
+    "transcript": "How does it go?",
+    "image": {
+      "setup": "The classroom appears to be well-organized and clean, with a focus on learning and engagement. The children are seated on the floor, which is a common practice in many cultures, as it encourages a more relaxed and comfortable environment. The presence of a mirror in the room suggests that the children may be using it for various activities, such as self-reflection or practicing their movements. The room is"
+    }
+  },
+  {
+    "start": 50.0,
+    "end": 60.007813,
+    "transcript": "Do you want to know what this monkey and crocodile did?",
+    "image": {
+      "setup": "Comment on the setup of the classroom such as the general cleanliness, organization of the classroom, decoration of the classroom etc."
+    }
+  },
+  {
+    "start": 60.0,
+    "end": 69.984563,
+    "transcript": "Yes. And so, big story again. Did you want to yell it? Yes.",
+    "image": {}
+  },
+  {
+    "start": 70.0,
+    "end": 80.007813,
+    "transcript": "Story time, story time, let's have fun.",
+    "image": {}
+  },
+  {
+    "start": 80.0,
+    "end": 90.007813,
+    "transcript": "Oh",
+    "image": {}
+  },
+  {
+    "start": 90.0,
+    "end": 99.984563,
+    "transcript": "Let's all gather.",
+    "image": {}
+  },
+  {
+    "start": 100.0,
+    "end": 110.007813,
+    "transcript": "Storytime, storytime, portrait style.",
+    "image": {}
+  },
+  {
+    "start": 110.0,
+    "end": 120.007813,
+    "transcript": "So, jump aboard the boat race time. Are you ready to go on a boat race? This is the boat.",
+    "image": {}
+  },
+  {
+    "start": 120.0,
+    "end": 129.984563,
+    "transcript": "This is the boat. Can I have a boat? Thank you.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher. They are also playing with a toy, which indicates their active participation in the learning process.",
+      "props": "The teacher is using a stuffed monkey toy to engage the children. The children are playing with the stuffed monkey toy, which is placed on the floor. This activity helps the children learn and interact with each other in a fun and interactive way.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 130.0,
+    "end": 140.007813,
+    "transcript": "I'll just do it. After story time, I'll do it. So, it will be Shambhala for the next three minutes.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher. They are also playing with a toy, which indicates their active participation in the learning process.",
+      "props": "The teacher is using a stuffed monkey toy to engage the children. The children are playing with the stuffed monkey toy, which is placed on the floor. This helps the children to focus on the lesson and learn in a fun and interactive way.",
+      "body_language": "The teacher is using hand gestures such as clapping and pointing to engage the children."
+    }
+  },
+  {
+    "start": 140.0,
+    "end": 150.007813,
+    "transcript": "Pongko",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.\n Yes, the children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a stuffed monkey toy to engage the children. The children are playing with the stuffed monkey toy, which is placed on the floor. This activity helps the children learn and interact with each other in a fun and engaging way.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?\n No"
+    }
+  },
+  {
+    "start": 150.0,
+    "end": 159.984563,
+    "transcript": ".",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a stuffed monkey to engage the children. The children are playing with the stuffed monkey, which is a prop used by the teacher to make the learning experience more interactive and enjoyable for the children.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?\n No"
+    }
+  },
+  {
+    "start": 160.0,
+    "end": 170.007813,
+    "transcript": "Jadi, Bob mempunyai kaki yang berada di atas kaki. Bolehkah kita tahu ini?",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a teddy bear to engage the children. The children are playing with the teddy bear, which is a prop used by the teacher to make the learning experience more interactive and enjoyable for the children.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?"
+    }
+  },
+  {
+    "start": 170.0,
+    "end": 179.984563,
+    "transcript": "Trees. Trees. Yes, he lived in the jungle with lots of green trees.",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are playing with a teddy bear, which is a popular toy among children. The children are also listening to the teacher, who is likely providing instructions or guidance. Overall, the children seem to be actively participating in the learning environment.",
+      "props": "The teacher is using a teddy bear as a prop to engage the children. The children are playing with the teddy bear, which is placed on the floor. This activity helps the children to learn and interact with each other in a fun and interactive way.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 180.0,
+    "end": 190.007813,
+    "transcript": "And he had a friend called the crocodile, Croc. He rocks with the crocodile. One day there was",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.\n Yes, the children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a stuffed animal to engage the children. The children are playing with the stuffed animal, which is a prop used by the teacher to make the learning experience more enjoyable and interactive.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?\n No"
+    }
+  },
+  {
+    "start": 190.0,
+    "end": 200.007813,
+    "transcript": "There was a whole pair of blues. There was going to be a four-trace. You know a four-trace is called ballet.",
+    "image": {
+      "child_engagement": "The children in the image are engaged in various activities. Some are sitting on the floor, while others are standing. They are interacting with each other and with the teacher, who is holding a teddy bear. The children are also playing with toys, such as a teddy bear, and are likely listening to the teacher as they participate in the learning activity. Overall, the children appear to be actively engaged in the",
+      "props": "The teacher is using a teddy bear as a prop to engage the children. The children are playing with toys and props, such as the teddy bear and other stuffed animals.",
+      "body_language": "The teacher is not using any hand gestures or facial gestures to engage the children. Instead, she is sitting on the floor with the children and holding a teddy bear. The children are sitting on the floor as well, and there are books and a cup on the floor. The scene appears to be a casual and relaxed environment where the children are free to interact with each other and the teacher."
+    }
+  },
+  {
+    "start": 200.0,
+    "end": 209.984563,
+    "transcript": "of Kalli in Malayalam. It's called Vallakalli Boat Race. You like to go on a boat, right?",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, playing with toys, and possibly participating in a craft or educational activity. The scene depicts a lively and interactive learning environment.",
+      "props": "The teacher is using a toy to engage the children. In the image, the teacher is holding a toy, which is likely a game or a learning tool. The children are playing with the toy, which helps them learn and have fun at the same time.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 210.0,
+    "end": 220.007813,
+    "transcript": "Yes, the bad boy was very excited. He wanted to go on the boat and win the race. Because if he wins the race,",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, who is talking to them. Additionally, there are toys and books present in the scene, which the children might be playing with or reading. Overall, the children seem to be actively participating in the learning process and enjoying their time with the teacher.",
+      "props": "The teacher is using a teddy bear to engage the children. The children are playing with the teddy bear, which is a prop that the teacher has introduced to the classroom. This helps to create a fun and interactive learning environment for the children.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 220.0,
+    "end": 230.007813,
+    "transcript": "He can get your cookies to eat. Okay, and so he tells that to his friend, Chris.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and interacting with each other. They are also playing with a toy, which indicates their active participation in the learning process.",
+      "props": "The teacher is using a stuffed monkey to engage the children. The children are playing with the stuffed monkey, which is a prop used by the teacher to make the learning experience more enjoyable and interactive.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 230.0,
+    "end": 239.984563,
+    "transcript": "Now Kiri, you know what, there's a boat race happening there in Kerala. Shall we go and take part in the race?",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher. They are also playing with a toy, which indicates their active participation in the learning process.",
+      "props": "The teacher is using a stuffed monkey toy to engage the children. The children are playing with the stuffed monkey toy, which is placed on the floor. This helps the children to learn and have fun at the same time.",
+      "body_language": "The teacher is using hand gestures such as clapping and facial gestures like smiling to engage the children."
+    }
+  },
+  {
+    "start": 240.0,
+    "end": 250.007813,
+    "transcript": "row the boat. I want to row the boat and go on a race. Would you like to join me? See, he's asking. He's asking.",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are playing with toys, such as teddy bears, and possibly listening to the teacher. The scene suggests that the children are actively participating in the learning process and enjoying their time in the classroom.",
+      "props": "The teacher is using a teddy bear as a prop to engage the children. The children are playing with toys and props, such as the teddy bear, as well as engaging in conversation with the teacher.",
+      "body_language": "The teacher is not using any hand gestures or movements to engage the children. Instead, she is holding a teddy bear and talking to the children."
+    }
+  },
+  {
+    "start": 250.0,
+    "end": 260.007813,
+    "transcript": "Can you see the girl?",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, who is likely teaching them something. Additionally, there are toys and books present in the scene, which suggests that the children might be playing with the toys or reading the books as part of their learning experience. Overall, the children appear to be actively participating in the educational activity.",
+      "props": "The teacher is using a variety of props and toys to engage the children. In the image, there are several books, which are likely being used to teach the children or to read to them. Additionally, there are toys, such as a teddy bear, which the children are playing with. The children are also sitting on a rug, which can be used as a play area or for storytelling. The teacher is",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 260.0,
+    "end": 269.984563,
+    "transcript": "Okay. Shall we roll the board with strongly? We'll come back later. Roll the board. Come on. Let's roll the board. All of you roll. Ready in the board.",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, who is holding a toy. The children are also playing with a toy, which suggests that they are actively participating in the learning process. Overall, the children appear to be engaged and focused on the lesson being taught.",
+      "props": "The teacher is using a mirror to engage the children. The children are playing with a toy dog.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 270.0,
+    "end": 280.007813,
+    "transcript": "Faster, faster, faster.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a mirror to engage the children in the classroom. The children are playing with a mirror, which is a prop that helps them learn and interact with each other. The mirror is being used to create a fun and interactive learning environment for the children.",
+      "body_language": "The teacher is not using any hand gestures or movement to engage the children. Instead, she is sitting on the floor and talking to the children."
+    }
+  },
+  {
+    "start": 280.0,
+    "end": 290.007813,
+    "transcript": "You know what is the jungle stream called in Malayalam? It's called Nathii.",
+    "image": {
+      "child_engagement": "In the image, the children are engaged in various activities. Some are sitting on the floor, while others are standing. A young boy is talking to a woman, and a child is holding a toy. The children are also listening to the teacher, who is giving instructions. Overall, the children appear to be actively participating in the learning process and interacting with each other and the teacher.",
+      "props": "The teacher is using a mirror to engage the children in the classroom. The children are playing with toys and props, such as a ball and a teddy bear. The presence of these toys and props indicates that the teacher is incorporating various learning tools to make the classroom environment more interactive and enjoyable for the children.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 290.0,
+    "end": 299.984563,
+    "transcript": "Shall we roll the boat in the sea? Roll, roll, roll your boat in the sea. Faster, faster, faster.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a toy car to engage the children. The children are playing with the toy car, which is placed on the floor. This activity helps the children learn and interact with each other in a fun and interactive way.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 300.0,
+    "end": 310.007813,
+    "transcript": "Left, right.",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, who is sitting on the floor as well. The children are also playing with a toy, which suggests that they are actively participating in the learning process. Overall, the children appear to be engaged and actively involved in the classroom setting.",
+      "props": "The teacher is using a toy to engage the children. In the image, there is a teddy bear present, which the children are playing with. This indicates that the teacher is incorporating toys and props into the learning environment to make the experience more interactive and enjoyable for the children.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 310.0,
+    "end": 320.00775,
+    "transcript": "Left, right, and the other side. And the other side.",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, who is sitting on the floor, and they are also playing with a toy. The children are actively participating in the classroom setting, which indicates that they are engaged and focused on the lesson.",
+      "props": "The teacher is using a toy to engage the children. In the image, a woman is sitting on a mat with a toy in her hand, which is likely a prop or a toy to help the children learn and have fun. The children are playing with the toy, which indicates that the teacher is using props or toys to make the learning process more interactive and enjoyable for the children.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 320.0,
+    "end": 329.984625,
+    "transcript": "in the jungle extreme. Slowly, slowly, slowly, and four more.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a variety of props and toys to engage the children. In the image, there are several teddy bears, which the children are playing with. Additionally, there are books and a clock in the room, which can be used to teach the children about time, numbers, and letters. The children are also sitting on a rug, which can be used to create a comfortable and interactive learning environment. The teacher",
+      "body_language": "No, the teacher is not using any hand gestures or movements to engage the children. She is sitting on the floor with the children, and they are all sitting on the floor as well."
+    }
+  },
+  {
+    "start": 330.0,
+    "end": 340.007813,
+    "transcript": "Remember that his friend took part in the race and this time he wants to go on the short race but he could not go far.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a teddy bear as a prop to engage the children. The children are playing with the teddy bear, which is placed on the floor. This activity helps the children to learn and interact with each other in a fun and interactive way.",
+      "body_language": "No, the teacher is not using any hand gestures or movements to engage the children. Instead, the children are sitting on the floor and looking at a book, which is likely being used as a teaching tool."
+    }
+  },
+  {
+    "start": 340.0,
+    "end": 350.00775,
+    "transcript": "He was tired. With all the left and the right, he was still tired. So he wanted to ask both eyes.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a drum to engage the children. The children are playing with toys and props, such as a teddy bear and a clock.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 350.0,
+    "end": 359.984625,
+    "transcript": "The donkey for help. The donkey came to help us cross the river and win the race for the hills.",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, playing with toys, and possibly participating in a game or activity. The scene depicts a lively and interactive learning environment where the children are actively participating and learning from their teacher.",
+      "props": "The teacher is using a toy to engage the children. In the image, a toy is present, and the children are playing with it. The toy is likely being used to teach the children about the world, as suggested by the presence of a world map in the scene. The children are also playing with a teddy bear, which adds to the interactive and engaging learning environment.",
+      "body_language": "The teacher is using hand gestures such as clapping and facial gestures like smiling to engage the children."
+    }
+  },
+  {
+    "start": 360.0,
+    "end": 370.00775,
+    "transcript": "I let her see a grave. She says, jump on my back. Jump on my back. I'm going to go sit in your porch.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher. The teacher is holding a stuffed animal, which the children are likely paying attention to. The scene suggests that the children are actively participating in the lesson or activity, rather than just passively listening.",
+      "props": "The teacher is using a stuffed animal, specifically a teddy bear, to engage the children. The teddy bear is placed on the floor, and the children are playing with it. The teacher is also using a mirror to help the children learn and interact with each other. The children are sitting on the floor, and they are playing with the teddy bear, which is a prop used by the teacher to make the learning process",
+      "body_language": "The teacher is using a combination of hand gestures, facial gestures, and movement to engage the children. In the image, the teacher is clapping and pointing at the children, which are hand gestures. Additionally, the teacher is smiling, which is a facial gesture. The teacher is also sitting on the floor, which is a movement. These techniques help to create a positive and interactive learning environment for the children"
+    }
+  },
+  {
+    "start": 370.0,
+    "end": 380.007813,
+    "transcript": "Just move, you can jump on the pad and go on the base so that he is not tired.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a stuffed monkey toy to engage the children. The children are playing with the stuffed monkey toy, which is placed on the floor. This activity helps the children learn and interact with each other in a fun and interactive way.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 380.0,
+    "end": 389.984625,
+    "transcript": "Can we go with him? Yes?",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, who is holding a stuffed monkey. The children are also playing with a toy, which is a stuffed monkey. The scene suggests that the children are actively participating in the learning process and enjoying their time in the classroom.",
+      "props": "The teacher is using a stuffed monkey toy to engage the children. The children are playing with the stuffed monkey toy, which is placed on the floor. This activity helps the children learn and interact with each other in a fun and interactive way.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 390.0,
+    "end": 400.00775,
+    "transcript": "How do we go? Left, right, left, right.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a teddy bear as a prop to engage the children. The children are playing with the teddy bear, which is placed on the floor. This helps to create a fun and interactive learning environment for the children.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 400.0,
+    "end": 410.007813,
+    "transcript": "Right, left, right, what happens what? I gave the lead.",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, playing with toys, and possibly participating in a group activity. The scene depicts a lively and interactive learning environment.",
+      "props": "The teacher is using a book to engage the children. The children are playing with toys, such as a baby doll.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 410.0,
+    "end": 419.984563,
+    "transcript": "Okay, major, major. And finally, they win the race.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a teddy bear to engage the children. The teddy bear is placed on the floor, and the children are playing with it. The children are also playing with a toy car, which is also placed on the floor. The teacher is sitting on the floor with the children, and she is actively involved in the learning process.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?"
+    }
+  },
+  {
+    "start": 420.0,
+    "end": 430.007813,
+    "transcript": "Did you like this study? Did you like it? Do you want to play with him? Yes?",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a teddy bear to engage the children. The children are playing with the teddy bear, which is a prop used by the teacher to make the learning process more interactive and enjoyable for the children.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 430.0,
+    "end": 440.007813,
+    "transcript": "Yes, you want to play. Now you can talk to Bongo. You talk to Bongo. He was angry after the race. And he said that",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a game board to engage the children. The children are playing with the game board, which is a prop that helps them learn and have fun.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 440.0,
+    "end": 449.984563,
+    "transcript": "And Koki also worked very hard through the race, right? She went row, row, row, and she was so hungry. And Bongo promised Yanka,",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a toy, specifically a large toy banana, to engage the children. The children are playing with the toy banana, which is placed on the floor. This activity helps the children learn and have fun at the same time.",
+      "body_language": "No, the teacher is not using any hand gestures or movement to engage the children. Instead, she is sitting on the floor with the children, and they are playing with a toy."
+    }
+  },
+  {
+    "start": 450.0,
+    "end": 460.007813,
+    "transcript": "How many fruits for crocodile, for making him thin? Crocodile likes mango, Bobby likes banana. I like apples.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a toy to engage the children. In the image, a toy is placed on the floor, and the children are playing with it. The children are also sitting on the floor, which suggests that they are actively participating in the activity. The presence of the toy and the children's engagement in the activity indicate that the teacher is using props and toys to create a fun and interactive",
+      "body_language": "No, the teacher is not using any hand gestures or movement to engage the children. She is sitting on the floor with the children, and they are all looking at her."
+    }
+  },
+  {
+    "start": 460.0,
+    "end": 470.007813,
+    "transcript": "What's your favorite snack? Banana. You like banana too Maa. What do you know like aloe vera? Banana.",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are playing with toys, listening to the teacher, and possibly participating in a group activity. The scene depicts a lively and interactive learning environment.",
+      "props": "The teacher is using a teddy bear as a prop to engage the children. The children are playing with the teddy bear, which is placed on the floor. This activity helps the children to learn and interact with each other in a fun and interactive way.",
+      "body_language": "The teacher is not using any hand gestures or facial gestures to engage the children. Instead, she is sitting on the floor with the children, and they are playing with a toy."
+    }
+  },
+  {
+    "start": 470.0,
+    "end": 479.984563,
+    "transcript": "What do you think? Yes, that's young. But actually, you?",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a toy to engage the children. In the image, there is a toy on the floor, which the children are playing with. The children are also sitting on the floor, which suggests that they are actively participating in the activity. The presence of the toy and the children's engagement in the activity indicate that the teacher is effectively using props and toys to create a fun and interactive",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 480.0,
+    "end": 490.007813,
+    "transcript": "What's that?",
+    "image": {
+      "child_engagement": "The children are engaged in a learning activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a toy elephant to engage the children. The children are playing with the toy elephant, which is placed on the floor. This activity helps the children learn and interact with each other in a fun and interactive way.",
+      "body_language": "The teacher is not using any hand gestures or facial gestures to engage the children. Instead, she is sitting on the floor with the children, and they are all sitting on a rug. The children are engaged in a game, and the teacher is watching them play."
+    }
+  },
+  {
+    "start": 490.0,
+    "end": 500.007813,
+    "transcript": "So you all called y'all these guys to do the heat? No, we're not for that. Can you find time to eat? Yeah.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a toy to engage the children. In the image, a toy is visible on the floor, and the children are playing with it. The children are also sitting on the floor, which suggests that they are actively participating in the activity. The presence of the toy and the children's engagement in the activity indicate that the teacher is effectively using props and toys to create a fun and",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 500.0,
+    "end": 509.984563,
+    "transcript": "Thank you for listening. Did you all like the story?",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a toy tree to engage the children. The children are playing with the toy tree, which is a prop that helps them learn and interact with each other. The toy tree is a creative way to teach the children and make learning fun and interactive.",
+      "body_language": "No, the teacher is not using any hand gestures or movements to engage the children. She is sitting on the floor and talking to the children."
+    }
+  },
+  {
+    "start": 510.0,
+    "end": 520.007813,
+    "transcript": "Okay, coffee.",
+    "image": {
+      "child_engagement": "The children are engaged in an activity, as they are playing with a toy, specifically a toy car. They are also listening to the teacher, who is instructing them on how to play with the toy car.",
+      "props": "The teacher is using a toy, specifically a large toothbrush, to engage the children. The children are playing with the toothbrush, which is a fun and interactive way to teach them about dental hygiene. The presence of the toothbrush and the children's involvement in playing with it indicates that the teacher is using props and toys to make learning more enjoyable and effective for",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 520.0,
+    "end": 530.007813,
+    "transcript": "Do you like the story? Okay. You like the work? What's your favorite character?",
+    "image": {
+      "child_engagement": "The children are engaged in various activities. Some are sitting on the floor, while others are standing. They are listening to the teacher, who is teaching them something. The children are also playing with a toy, which indicates that they are actively participating in the learning process. Overall, the children appear to be engaged and focused on the lesson being taught.",
+      "props": "The teacher is using a toy to engage the children. In the image, there is a toy car on the floor, which the children are playing with. This helps to keep the children engaged and focused during the lesson.",
+      "body_language": "The teacher is not using any hand gestures or facial gestures to engage the children. Instead, she is sitting on the floor with the children and reading a book to them."
+    }
+  },
+  {
+    "start": 530.0,
+    "end": 539.984563,
+    "transcript": "You want to hold the crocodile? You want to hold him? You want to feel the crocodile? You can just feel it. You might be gentle.",
+    "image": {
+      "child_engagement": "The children are engaged in a learning activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a toy tree to engage the children. The children are playing with the toy tree, which is a prop that helps them learn and interact with each other.",
+      "body_language": "The teacher is not using any hand gestures or movement to engage the children. Instead, she is sitting on the floor and talking to the children."
+    }
+  },
+  {
+    "start": 540.0,
+    "end": 550.007813,
+    "transcript": "Okay, and this is the forward too. Oh, oh. Hold the stick. And then you just hold this. You want to put the pole?",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a leaf prop to engage the children. The children are playing with the leaf prop, which is a toy that helps them learn and interact with the environment. The children are also sitting on the floor, which is a common activity for young children to learn and explore.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?"
+    }
+  },
+  {
+    "start": 550.0,
+    "end": 560.007813,
+    "transcript": "Hello, Crocky. Hi, it's me. Oh, it's got a beard, guys. He's too shy. Oh, oh, oh, oh, oh.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a book to engage the children. The children are playing with toys and props, such as a toy car and a toy tree. The children are also sitting on the floor, which is a common play area for young children.",
+      "body_language": "The teacher is not using any hand gestures or movement to engage the children. Instead, she is sitting on the floor with the children, reading a book to them. This approach allows the children to focus on the content of the book and helps them develop a love for reading."
+    }
+  },
+  {
+    "start": 560.0,
+    "end": 569.984563,
+    "transcript": "How is it?",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a toy lion to engage the children. The children are playing with the toy lion, which is a prop that helps them learn and have fun at the same time.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 570.0,
+    "end": 580.007813,
+    "transcript": "Charlie, jump like monkey and sing.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a game board to engage the children. The children are playing with toys and props, such as a game board, which is a part of the learning experience. The presence of a game board and other toys and props indicates that the teacher is incorporating various learning methods to make the lesson more interactive and enjoyable for the children.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 580.0,
+    "end": 590.007813,
+    "transcript": ".",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a toy, specifically a teddy bear, to engage the children. The children are playing with the teddy bear, which is placed on the floor. This activity helps the children learn and interact with each other in a fun and interactive way.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?"
+    }
+  },
+  {
+    "start": 590.0,
+    "end": 599.984563,
+    "transcript": "slings. Sling.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a mirror to engage the children. The children are playing with toys and props, such as a teddy bear and a handbag.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?"
+    }
+  },
+  {
+    "start": 600.0,
+    "end": 610.007813,
+    "transcript": "Yes!",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a mirror to engage the children. The children are playing with toys, such as a teddy bear and a doll.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 610.0,
+    "end": 620.00775,
+    "transcript": "Good job!",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are actively participating in the game. They are playing with a toy, specifically a toy car, and are also listening to the teacher.",
+      "props": "The teacher is using a game board to engage the children. The children are playing with toys and props, such as a game board, a ball, and a teddy bear.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 620.0,
+    "end": 629.984625,
+    "transcript": "Evet.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a teddy bear to engage the children. The children are playing with the teddy bear, which is placed on the floor. This activity helps the children to learn and interact with each other in a fun and interactive way.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 630.0,
+    "end": 640.007813,
+    "transcript": "Point, point. What is point, point? So we do this, Arisa, point, point. Point, point.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a teddy bear as a prop to engage the children. The children are playing with the teddy bear, which is placed on the floor. This helps to create a fun and interactive learning environment for the children.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 640.0,
+    "end": 650.00775,
+    "transcript": "Sampai jumpa.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a teddy bear as a prop to engage the children. The children are playing with the teddy bear, which is placed on the floor. This helps to create a fun and interactive learning environment for the children.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 650.0,
+    "end": 659.984625,
+    "transcript": "Did you like the song Story Time Story Time? Yes. Shall we sing that right?",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a toy to engage the children. In the image, there is a toy on the floor, which the children are playing with. The children are also sitting on the floor, which suggests that they are actively participating in the activity. The presence of the toy and the children's engagement in the activity indicate that the teacher is effectively using props and toys to create a fun and interactive",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 660.0,
+    "end": 670.00775,
+    "transcript": "Story time, story time, death's so pure and little fun.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a large orange jug or vase as a prop to engage the children. The children are playing with the jug, which is placed on the floor. This activity helps the children learn about shapes, sizes, and textures while having fun.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 670.0,
+    "end": 680.007813,
+    "transcript": "Sweet.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a toy to engage the children. In the image, there is a teddy bear on the floor, which the children are playing with. This toy helps the children to focus on the lesson and learn in a fun and interactive way.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 680.0,
+    "end": 689.984625,
+    "transcript": "Story time, story time, jump aboard it, fortress time.",
+    "image": {
+      "child_engagement": "Are the children appearing to be engaged e.g doing an action, playing with a toy or listening to the teacher.",
+      "props": "The teacher is using a toy to engage the children. In the image, there is a teddy bear on the floor, which the children are playing with. This toy helps the children to focus on the lesson and learn in a fun and interactive way.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?"
+    }
+  },
+  {
+    "start": 690.0,
+    "end": 700.00775,
+    "transcript": "Have you gone on a boat before? Have you even gone on a boat before? Yes, go.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a toy to engage the children. In the image, there is a toy car on the floor, which the children are playing with. This toy car is likely being used to teach the children about different types of vehicles or to encourage their imaginative play. The children are also sitting on the floor, which suggests that they are actively participating in the learning process and enjoying their time",
+      "body_language": "The teacher is not using any hand gestures or facial gestures to engage the children. Instead, she is sitting on the floor with the children, and they are all looking at a book together. This suggests that the teacher is using the book as a learning tool and focusing on the content of the book to teach the children."
+    }
+  },
+  {
+    "start": 700.0,
+    "end": 710.007813,
+    "transcript": "I am getting jealous.",
+    "image": {
+      "child_engagement": "The children in the image are engaged in various activities. Some are sitting on the floor, while others are standing. A young boy is standing and looking at the camera, and a baby is sitting on the floor. The children are also interacting with each other, which suggests that they are actively participating in the learning environment. Overall, the children appear to be engaged in their activities and are likely learning and having fun in the",
+      "props": "The teacher is using a toy to engage the children. In the image, there is a toy hanging from the ceiling, which the children are playing with. The children are also playing with a ball, which is another prop being used to keep them engaged and active.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 710.0,
+    "end": 719.984563,
+    "transcript": "You want to hold the board? Thank you. You want to take it?",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a ball to engage the children. The children are playing with the ball, which is a prop that helps them learn and have fun.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 720.0,
+    "end": 730.007813,
+    "transcript": "Thank you.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are playing with a toy, specifically a crocodile toy. They are also listening to the teacher, who is instructing them on how to use the toy.",
+      "props": "The teacher is using a stuffed alligator toy to engage the children. The children are playing with the stuffed alligator, which is a prop used by the teacher to make the learning experience more interactive and enjoyable.",
+      "body_language": "The teacher is using hand gestures such as clapping and standing up to engage the children."
+    }
+  },
+  {
+    "start": 730.0,
+    "end": 740.007813,
+    "transcript": ".",
+    "image": {
+      "child_engagement": "In the image, the children are engaged in various activities. Some are sitting on the floor, while others are standing. A young boy is being held by a woman, and a child is being held by a woman in a pink shirt. The children are also playing with a toy, which suggests that they are actively participating in the learning process. Overall, the children appear to be engaged and focused on the activities",
+      "props": "The teacher is using a mirror to engage the children. The children are playing with toys, such as a ball and a teddy bear.",
+      "body_language": "Is the teacher using hand gestures such as clapping, counting or facial gestures like smile or scowling or movement such as standing up, dancing etc. to engage the children ?\n No"
+    }
+  },
+  {
+    "start": 740.0,
+    "end": 749.984563,
+    "transcript": "And here you can have a look at this. Lots of money money.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a toy, specifically a toy car, to engage the children. The children are playing with the toy car, which is placed on the floor. This activity helps the children learn and develop their motor skills, hand-eye coordination, and cognitive abilities.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 750.0,
+    "end": 760.007813,
+    "transcript": "Yeah, yeah, yeah, yeah, yeah, yeah.",
+    "image": {
+      "child_engagement": "The children are engaged in the activity, as they are sitting on the floor and listening to the teacher.",
+      "props": "The teacher is using a green and yellow umbrella to engage the children. The children are playing with the umbrella, which is a prop that helps them learn and have fun.",
+      "body_language": "The teacher is using hand gestures such as clapping and counting to engage the children."
+    }
+  },
+  {
+    "start": 760.0,
+    "end": 760.674438,
+    "transcript": "Thank you.",
+    "image": {}
+  }
+]

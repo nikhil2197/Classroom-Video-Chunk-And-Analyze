@@ -35,7 +35,7 @@ import sys, pathlib
 #Ensure parent folder is in the import path
 #sys.path.append(str(pathlib.Path(__file__).resolve().parent.parent))
 
-from config import OPENAI_MODEL
+from config import OPENAI_MODEL, ANALYSIS_PROMPTS
 
 # Configuration
 TPM_LIMIT = 28000
@@ -71,9 +71,10 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
 # Feedback generation function
 def generate_feedback(llava_json_path: str | Path, output_dir: str | Path) -> None:
-    try:
-        with open(llava_json_path, "r") as f:
-            raw: dict[str, str] = json.load(f)
+    try:                                                                                                                                                                        
+        with open(llava_json_path, "r") as f:                                                                                                                                   
+            # raw may map frame names to either a single string or a dict of prompt-name -> caption                                                                             
+            raw: dict[str, object] = json.load(f)  
     except Exception as e:
         print(f"❌ Failed to load JSON file: {e}")
         sys.exit(1)
@@ -82,8 +83,19 @@ def generate_feedback(llava_json_path: str | Path, output_dir: str | Path) -> No
     compressed: list[str] = []
     last_desc, first_frame, last_frame = None, None, None
 
-    for frame, desc in raw.items():
-        desc = _clean(desc)
+    for frame, item in raw.items():                                                                                                                                             
+        # Flatten multi-prompt entries or use single string                                                                                                                     
+        if isinstance(item, dict):                                                                                                                                              
+            parts: list[str] = []                                                                                                                                               
+            # iterate in config order to keep consistency                                                                                                                       
+            for p in ANALYSIS_PROMPTS:                                                                                                                                          
+                key = p["name"]                                                                                                                                                 
+                if key in item and item[key]:                                                                                                                                   
+                    parts.append(f"[{key}] {item[key].strip()}")                                                                                                                
+            desc_str = "\n".join(parts)                                                                                                                                         
+        else:                                                                                                                                                                   
+            desc_str = str(item)                                                                                                                                                
+        desc = _clean(desc_str)   
         if desc == last_desc:
             last_frame = frame
             continue
@@ -120,7 +132,14 @@ def generate_feedback(llava_json_path: str | Path, output_dir: str | Path) -> No
 You are an expert pre-school classroom observer.
 
 For each frame description below, infer what the teacher and children are
-doing, judge teaching quality, and provide constructive, actionable feedback.
+doing, judge teaching quality, and provide constructive, actionable feedback. Grade them basis the following criteria:
+1. Classroom setup
+2. Warm-up and settling-down
+3. Props and visual aids
+4. Body language
+5. Child interaction
+6. Wrap-up
+
 
 OUTPUT FORMAT
 - Key Strengths

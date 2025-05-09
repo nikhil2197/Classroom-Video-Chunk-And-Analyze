@@ -4,11 +4,12 @@ This repository contains a collection of scripts for experimenting with differen
 
 The scripts in this repo include attempts using:
 
-- **OpenAI Whisper** for transcription and evaluation
+- **OpenAI Whisper (v2 on API)** for audio-only transcription and GPT-4o-based evaluation
+- **OpenAI Whisper (large-v3 on GPU)** for audio-only transcription <- this is the latest and greatest in transcription for this repo. It is on `whisperlarge_v3` subfolder
 - **Google Cloud Video Intelligence API** for activity recognition and segmentation passed through to **GPT-4o** for scoring
 - **Demucs + Whisper (GPU)** for teacher voice isolation
-- **LLaVA (Language-Image Alignment Vision Assistant)** for visual analysis of classroom scenes
-- **Combined Audio-Video Feedback Script** for synthesizing audio and image-based feedback into a comprehensive evaluation
+- **LLaVA (Language-Image Alignment Vision Assistant)** with feature-based prompts (e.g., setup, prop_usage, engagement) and 1 frame per 10 s extraction for visual analysis of classroom scenes
+- **Combined Audio-Video Feedback Script** that merges audio and video JSON transcripts into a unified GPT-4o evaluation
 
 ### Evolution of Approaches
 
@@ -22,6 +23,14 @@ To overcome the limitations of earlier methods, we moved to a GPU-based setup us
 2. **LLaVA (Visual)** - Frame-by-frame scene analysis to understand classroom dynamics visually.
 3. **Combine Script** - Integrates audio and visual feedback to generate a holistic report.
 
+### Whisper-large-v3 Audio Transcription
+We’ve added a standalone audio transcription pipeline using **Whisper-large-v3**. This script chunks the input video into 1-minute segments, transcribes each with Whisper-large-v3, and sends the combined transcript to **GPT-4o** for detailed feedback.
+
+#### Usage
+```bash
+python whisperaudio_chunk_transcribe_analyze.py path/to/video.mp4
+```
+
 ### Demucs + Whisper Pipeline (Audio)
 The Demucs + Whisper pipeline isolates the teacher’s voice from noisy classroom environments and transcribes it using Whisper large-v3. This approach significantly improves transcription accuracy when compared to raw audio processing.
 
@@ -31,8 +40,7 @@ python main.py path/to/video.mp4
 ```
 
 ### LLaVA Video Analysis (Visual)
-The LLaVA approach focuses on analyzing classroom scenes from videos using image recognition models. It breaks down classroom interactions visually, identifying group activities, individual engagement, and teacher movements.
-**Note on speed** - you can expect to process about 9 frames (1 frame = 1 minute of the video) per clock minute in the current implementation on the NVIDIA T4 GPU mentioned. 
+The LLaVA pipeline has been updated to use **feature-based prompts** rather than a single monolithic prompt. We now query each extracted frame for specific feature categories—such as **setup** (classroom arrangement), **prop_usage** (teacher’s use of visual aids), **engagement** (student participation), **classroom_management**, etc.—to focus the model on actionable aspects. Frame extraction has also been adjusted to capture **one frame every 10 seconds**, balancing temporal coverage against token use.
 
 #### Usage (within the LLaVA file path)
 ```bash
@@ -40,11 +48,11 @@ python main.py path/to/video.mp4
 ```
 
 ### Combining Audio and Video Feedback
-The combined approach runs the Demucs pipeline first, followed by the LLaVA pipeline. The outputs from both are then integrated using the combine script to generate a comprehensive evaluation report.
+The combined feedback generator now accepts **two JSON transcript files** (audio and visual), merges them into a consolidated transcript, and feeds the combined content into **GPT-4o** for a unified evaluation.
 
-#### Usage (after the Audio and Video runs have been completed and path added)
+#### Usage
 ```bash
-python combine_audio_video_feedback.py
+python combine_audio_video_feedback.py --audio-json path/to/audio_feedback.json --video-json path/to/video_feedback.json
 ```
 
 ### Issues and Limitations
@@ -58,6 +66,7 @@ Even though these issues exist, the output still catches actionable feedback suc
 See the file `Combined_Pipeline_Outputs` folder for the detailed outputs from the 2 runs. Inside this folder you can see the intermediate outputs from the Audio and Video processing steps as well as the final feedback. 
 - **Teacher 1**: Only a snippet of an art & craft activity was provided and the prompt used by LLaVA was a stub prompt. 
 - **Teacher 2**: A clip of a full storytelling activity was provided with the LLaVA prompt containing both context about the activity and directions w.reg. to what to analyze in the images. 
+- **Teacher 2**: Updated feedback with the 09/05/2025 changes made.
 
 ### ⚠️ Important
 All code runs on a GCP NVIDIA T4 GPU (n1-standard-16) for optimal performance. Ensure you have the appropriate environment configured.

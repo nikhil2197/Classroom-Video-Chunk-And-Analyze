@@ -1,0 +1,5 @@
+# Requirements for audi transcription pipeline
+transformers>=4.0.0
+torch
+tqdm
+soundfile

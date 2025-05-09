@@ -4,7 +4,7 @@
 import os, json, torch
 from PIL import Image
 from transformers import AutoProcessor, AutoModelForImageTextToText
-from config import LLaVA_PROMPT
+from config import ANALYSIS_PROMPTS, FPS
 
 # ------------------------------------------------------------------
 # 1.  Environment & model
@@ -54,20 +54,71 @@ def infer_frame(img_path: str, prompt: str) -> str | None:
 # 3.  Loop over frame folder
 # ------------------------------------------------------------------
 def run_llava_on_frames(frame_dir: str, output_dir: str) -> str:
-    os.makedirs(output_dir, exist_ok=True)
-    results = {}
-
-    for fname in sorted(os.listdir(frame_dir)):
-        if not fname.lower().endswith(".jpg"):
-            continue
-        fpath = os.path.join(frame_dir, fname)
-        print(f"🖼️  Inferring: {fname}")
-        caption = infer_frame(fpath, LLaVA_PROMPT)
-        if caption:
-            results[fname] = caption
-
-    out_json = os.path.join(output_dir, "llava_responses.json")
-    with open(out_json, "w") as f:
-        json.dump(results, f, indent=2)
-    print(f"✅  Inference completed. Captions saved to {out_json}")
-    return out_json
+    """                                                                                                                                                                         
+    Run LLaVA inference with multiple prompts based on time windows.                                                                                                            
+    Outputs a JSON mapping each frame to a dict containing:                                                                                                                     
+      - time_s: time in seconds                                                                                                                                                 
+      - time_min: time in minutes                                                                                                                                               
+      - <prompt_name>: caption string for each applicable prompt                                                                                                                
+    """                                                                                                                                                                         
+    os.makedirs(output_dir, exist_ok=True)                                                                                                                                      
+    results = {}                                                                                                                                                                
+                                                                                                                                                                                
+    for fname in sorted(os.listdir(frame_dir)):                                                                                                                                 
+        if not fname.lower().endswith(".jpg"):                                                                                                                                  
+            continue                                                                                                                                                            
+        fpath = os.path.join(frame_dir, fname)                                                                                                                                  
+                                                                                                                                                                                
+        # Parse frame index from filename, e.g. 'frame_0012.jpg' -> 12                                                                                                          
+        try:                                                                                                                                                                    
+            base = os.path.splitext(fname)[0]                                                                                                                                   
+            idx = int(base.split('_')[-1])                                                                                                                                      
+        except Exception:                                                                                                                                                       
+            print(f"⚠️  Cannot parse frame index from '{fname}', skipping.")                                                                                                    
+            continue                                                                                                                                                            
+                                                                                                                                                                                
+        # Compute time in seconds and minutes                                                                                                                                   
+        time_s = idx / FPS                                                                                                                                                      
+        time_min = time_s / 60.0                                                                                                                                                
+                                                                                                                                                                                
+        entry: dict[str, object] = {                                                                                                                                            
+            "time_s": time_s,                                                                                                                                                   
+            "time_min": time_min,                                                                                                                                               
+        }                                                                                                                                                                       
+                                                                                                                                                                                
+        # Determine which prompts apply for this frame                                                                                                                          
+        applicable = []                                                                                                                                                         
+        for p in ANALYSIS_PROMPTS:                                                                                                                                              
+            start = p.get("start_min", 0)                                                                                                                                       
+            end = p.get("end_min", None)                                                                                                                                        
+            if time_min >= start and (end is None or time_min < end):                                                                                                           
+                applicable.append(p)                                                                                                                                            
+                                                                                                                                                                                
+        if not applicable:                                                                                                                                                      
+            print(f"🖼️  No prompts for {fname} at {time_s:.1f}s.")                                                                                                             
+            results[fname] = entry                                                                                                                                              
+            continue                                                                                                                                                            
+                                                                                                                                                                                
+        names = [p["name"] for p in applicable]                                                                                                                                 
+        print(f"🖼️  Inferring {fname} at {time_s:.1f}s for prompts: {names}")                                                                                                  
+                                                                                                                                                                                
+        # Run inference for each prompt
+        for p in applicable:
+            cap = infer_frame(fpath, p["prompt"])
+            if not cap:
+                continue
+            # Extract only the model's response, stripping any echoed prompt
+            if "\n\n" in cap:
+                response = cap.split("\n\n", 1)[1].strip()
+            else:
+                response = cap.strip()
+            entry[p["name"]] = response
+                                                                                                                                                                                
+        results[fname] = entry                                                                                                                                                  
+                                                                                                                                                                                
+    # Save all results as JSON                                                                                                                                                  
+    out_json = os.path.join(output_dir, "llava_responses.json")                                                                                                                 
+    with open(out_json, "w") as f:                                                                                                                                              
+        json.dump(results, f, indent=2)                                                                                                                                         
+    print(f"✅  Inference completed. Captions saved to {out_json}")                                                                                                              
+    return out_json  
