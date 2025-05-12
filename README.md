@@ -5,7 +5,8 @@ This repository contains a collection of scripts for experimenting with differen
 The scripts in this repo include attempts using:
 
 - **OpenAI Whisper (v2 on API)** for audio-only transcription and GPT-4o-based evaluation
-- **OpenAI Whisper (large-v3 on GPU)** for audio-only transcription using 10s chunks instead of 1 minute chunks <- this is the latest and greatest in transcription for this repo. It is on `whisperlarge_v3` subfolder
+- **OpenAI Whisper (large-v3 on GPU)** for audio-only transcription using 10s chunks instead of 1 minute chunks. It is on `whisperlarge_v3` subfolder
+- **ElevenLabs Scribe API** to transcribe the full audio in 1 go <- this is currently the latest and greatest in audio transcription for this repo. You can access this in the `eleven_labs` folder.
 - **Google Cloud Video Intelligence API** for activity recognition and segmentation passed through to **GPT-4o** for scoring
 - **Demucs + Whisper (GPU)** for teacher voice isolation
 - **LLaVA (Language-Image Alignment Vision Assistant)** with feature-based prompts (e.g., setup, prop_usage, engagement) and 1 frame per 10 s extraction for visual analysis of classroom scenes
@@ -23,13 +24,15 @@ To overcome the limitations of earlier methods, we moved to a GPU-based setup us
 2. **LLaVA (Visual)** - Frame-by-frame scene analysis to understand classroom dynamics visually.
 3. **Combine Script** - Integrates audio and visual feedback to generate a holistic report.
 4.  **Whisper large-v3 (Audio)** - Transcribing the full session audio.
+5.  **ElevenLabs Scribe API** - Transcribing the full session audio.
 
-### Whisper-large-v3 Audio Transcription
-We’ve added a standalone audio transcription pipeline using **Whisper-large-v3**. This script chunks the input video into 10s segments and then transcribes each with Whisper-large-v3 running on a GPU. This is then merged with the image captioning done at the same frame rate to create a combined timeline for the video. 
+### ElevenLabs Scribe API
+Used the elevenlabs scribev1 api to transcribe the full recording in 1 go and generate the output json. This was then re-processed to allign with the frame wise processing done for visual component of the project and then passed into the combined feedback generator. This did a significantly better job at handling the indian accent used in the classroom and handling the background noise. An added benefit is that it is an API call that can be run remotely v/s. whisper-large which requires GPU processing currently. 
 
 #### Usage (within whisperlarge_v3 folder)
 ```bash
 python main.py path/to/video.mp4
+python split_to_intervals.py path/to/output.json
 ```
 
 ### Demucs + Whisper Pipeline (Audio)
@@ -58,9 +61,11 @@ python combine_audio_video_feedback.py --audio-json path/to/audio_feedback.json 
 ```
 
 ### Issues and Limitations
-- **Audio Quality**: The current audio transcript still contains noise from adjacent classes (picked up by the microphone), which affects accuracy. Human reviewers can often ignore background sounds, but the audio processing currently lacks this ability. We may address this by using larger models and improving microphone setup.
+- **Audio Quality**: The current audio transcript is within acceptable tolerance using the eleven labs scribe v1 API. Further improvements will come from improving the microphone setup in classroom.
+    - We are currently missing prosody (pitch / volume / intonation) features which are a crucial component of classroom facilitaion for children of this age and are working on identifying the best methods to add these features into the combined transcript to make it richer. 
 - **Visual Context**: The LLaVA model sometimes guesses the class type (e.g., 'Art and Craft') when it is uncertain. Providing more explicit context or providing a fully contained activity rather than a small clip of an activity may yield better results. 
     - This was verified by simply attempting a more focused LLaVA prompt, hence further improvements will be made in this direction. The difference in results can be observed in the outputs for _teacher1_ (without a detailed config prompt, only snippet of activity) v/s. _teacher2_ (with a detailed config prompt and fully contained activity)
+    - We tried using  YOLOv8 to pre-process images before giving them to LLaVA however, the pre-trained weights available don't seem to be suitable for this step giving us very generic output. We might attempt to fine tune our own version of YOLO however this will be a much later improvement. 
 
 Even though these issues exist, the output still catches actionable feedback such as teacher dominance, usage of open-ended questions, and personalized attention.
 
@@ -68,7 +73,8 @@ Even though these issues exist, the output still catches actionable feedback suc
 See the file `Combined_Pipeline_Outputs` folder for the detailed outputs from the 2 runs. Inside this folder you can see the intermediate outputs from the Audio and Video processing steps as well as the final feedback. 
 - **Teacher 1**: Only a snippet of an art & craft activity was provided and the prompt used by LLaVA was a stub prompt. 
 - **Teacher 2**: A clip of a full storytelling activity was provided with the LLaVA prompt containing both context about the activity and directions w.reg. to what to analyze in the images. 
-- **Teacher 2**: Updated feedback with the 09/05/2025 changes made.
+- **Teacher 2**: Updated feedback with the 09/05/2025 using whisper_v3_large audio processing.
+- **Teacher 2**: Updated feedback with the 12/05/2025 changes using the elevenlabs audio processing.
 
 ### ⚠️ Important
 All code runs on a GCP NVIDIA T4 GPU (n1-standard-16) for optimal performance. Ensure you have the appropriate environment configured.
