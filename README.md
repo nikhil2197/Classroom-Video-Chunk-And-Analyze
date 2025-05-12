@@ -29,7 +29,7 @@ To overcome the limitations of earlier methods, we moved to a GPU-based setup us
 ### ElevenLabs Scribe API
 Used the elevenlabs scribev1 api to transcribe the full recording in 1 go and generate the output json. This was then re-processed to allign with the frame wise processing done for visual component of the project and then passed into the combined feedback generator. This did a significantly better job at handling the indian accent used in the classroom and handling the background noise. An added benefit is that it is an API call that can be run remotely v/s. whisper-large which requires GPU processing currently. 
 
-#### Usage (within whisperlarge_v3 folder)
+#### Usage (within eleven_labs folder)
 ```bash
 python main.py path/to/video.mp4
 python split_to_intervals.py path/to/output.json
