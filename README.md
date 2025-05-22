@@ -2,6 +2,8 @@
 
 This repository contains a collection of scripts for experimenting with different approaches to analyzing classroom video. The primary goal is to automate the evaluation of teaching sessions through a combination of video chunking, transcription, and performance analysis.
 
+See the `Results and Next Steps` section at the bottom for details w.reg. the outcome of the project. 
+
 The scripts in this repo include attempts using:
 
 - **OpenAI Whisper (v2 on API)** for audio-only transcription and GPT-4o-based evaluation
@@ -76,6 +78,24 @@ See the file `Combined_Pipeline_Outputs` folder for the detailed outputs from th
 - **Teacher 2**: Updated feedback with the 09/05/2025 using whisper_v3_large audio processing.
 - **Teacher 2**: Updated feedback with the 12/05/2025 changes using the elevenlabs audio processing.
 
+### Results
+
+Given that visual evaluation significantly outperformed audio-based evaluation, we refined our rubrics to assess only two criteria — **Room Setup** and **Activity Setup** — purely through images.
+
+We benchmarked approximately **200 model-generated evaluations** (on a 0, 0.5, 1 scale) against human grader scores:
+
+- **45%** were a **perfect match** with human evaluations  
+- An additional **44%** were **within half a band** of the human score  
+- All half-band mismatches were **qualitatively explainable**, demonstrating sound model reasoning
+
+This level of accuracy met the predefined MVP threshold, allowing us to proceed to production deployment.
+
+### Next Steps
+
+- Automate image **input and output** processes  
+- Scale backend **APIs** to handle increased load  
+- Build a more **intuitive front-end** for end users
+- 
 ### ⚠️ Important
 All code runs on a GCP NVIDIA T4 GPU (n1-standard-16) for optimal performance. Ensure you have the appropriate environment configured.
 
